@@ -268,6 +268,12 @@
             }
         }
     }
+
+    // Temp solution. For some reason getReadPermFromText does not pick up Water
+    // TODO: Debug the package to pick up Water from passed types, rather than adding it here
+     HKObjectType *water = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDietaryWater];
+    [readPermSet addObject:water];
+
     return readPermSet;
 }
 
