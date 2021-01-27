@@ -142,6 +142,7 @@ declare module 'react-native-health' {
     ): void
 
     getWater(
+      options: Pick<HealthValueOptions, 'startDate'>,
       callback: (err: string, results: HealthValue) => void,
     ): void
 
